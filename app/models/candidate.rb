@@ -1,4 +1,4 @@
 class Candidate < ActiveRecord::Base
-belongs_to: vote
+has_many :votes
 
 end
