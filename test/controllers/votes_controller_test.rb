@@ -6,8 +6,8 @@ class VotesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get show" do
-    get :show
+  test "should get destroy" do
+    get :destroy
     assert_response :success
   end
 

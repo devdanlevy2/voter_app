@@ -7,13 +7,13 @@ class VotersControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show
+    get :show, id: voters(:one).id
     assert_response :success
   end
 
-  test "should get create" do
-    get :create
-    assert_response :success
+  test "should get update" do
+    get :update
+    assert_response :successs
   end
 
 end
