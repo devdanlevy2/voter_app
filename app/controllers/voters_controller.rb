@@ -14,9 +14,8 @@ class VotersController < ApplicationController
 
   def update
     r = Review.find(params[:id])
-#enter update loop here????
     r.update
     render json: "update was successful."
- end
   end
+
 end
