@@ -3,7 +3,7 @@ class VotersController < ApplicationController
     name = params["name"]
     party = params["party"]
     token = params["token"]
-    v = Voter.create(name: name, party: party, token: token)
+    v = Voter.create(name: name, party: party)
     render json: v
   end
 
@@ -13,6 +13,10 @@ class VotersController < ApplicationController
   end
 
   def update
-    
+    r = Review.find(params[:id])
+#enter update loop here????
+    r.update
+    render json: "update was successful."
+ end
   end
 end

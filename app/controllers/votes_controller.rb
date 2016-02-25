@@ -7,7 +7,11 @@ class VotesController < ApplicationController
   end
 
   def destroy
-    
+    v = Vote.find(params[:id])
+    v.destroy
+    render json: "Delete was successful."
+    end
+
   end
 
   def index
